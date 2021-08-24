@@ -1,0 +1,1371 @@
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline;
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+html {
+  font-family: "Play", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-focus-ring-color: rgba(255, 255, 255, 0);
+  cursor: default;
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  line-height: 1;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  background: transparent;
+}
+*:focus,
+*:active,
+*:hover {
+  outline: none;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+pre {
+  -moz-tab-size: 4;
+  tab-size: 4;
+  white-space: pre-wrap;
+}
+q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+img {
+  border: none;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+button,
+input {
+  line-height: normal;
+}
+button,
+select {
+  text-transform: none;
+}
+button {
+  overflow: visible;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield;
+  box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+button,
+input,
+select[multiple],
+textarea {
+  background-image: none;
+}
+input,
+select,
+textarea {
+  border-radius: 0;
+  box-shadow: none;
+}
+input,
+textarea {
+  resize: none;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+[placeholder]:focus:-ms-input-placeholder {
+  color: transparent;
+}
+[placeholder]:focus::placeholder {
+  color: transparent;
+}
+.pnf {
+  background-color: #1a1f28;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.pnf__wrapper {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.content {
+  padding: 40px 2.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 676px;
+}
+
+@media screen and (max-width: 1199px) {
+  .content {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .content {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .content {
+    padding: 35px 15px 26px;
+  }
+}
+
+.logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.message__image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 33px;
+}
+
+.message-img-wrapper {
+  position: relative;
+}
+
+.message-img-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient(
+    circle farthest-side,
+    #0c3c2a 0%,
+    rgba(0, 212, 134, 0) 100%
+  );
+}
+
+@media screen and (max-width: 991px) {
+  .message__image {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 33px;
+  }
+  .message-img-wrapper::before {
+    width: 45vw;
+    height: 45vw;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .message-img-wrapper::before {
+    width: 80vw;
+    height: 80vw;
+  }
+}
+
+.message__image svg {
+  width: 100%;
+  height: auto;
+}
+
+.message__image .glitch {
+  position: absolute;
+  left: calc(50% - 97px);
+  top: calc(50% - 60px);
+  width: 194px;
+  z-index: 2;
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip: rect(159px, 191px, 148px, 0);
+  }
+
+  1.66667% {
+    clip: rect(81px, 191px, 92px, 0);
+  }
+
+  3.33333% {
+    clip: rect(53px, 191px, 34px, 0);
+  }
+
+  5% {
+    clip: rect(93px, 191px, 136px, 0);
+  }
+
+  6.66667% {
+    clip: rect(-12px, 191px, 147px, 0);
+  }
+
+  8.33333% {
+    clip: rect(23px, 191px, 62px, 0);
+  }
+
+  10% {
+    clip: rect(85px, 191px, 191px, 0);
+  }
+
+  11.66667% {
+    clip: rect(67px, 191px, 154px, 0);
+  }
+
+  13.33333% {
+    clip: rect(63px, 191px, 56px, 0);
+  }
+
+  15% {
+    clip: rect(123px, 191px, 108px, 0);
+  }
+
+  16.66667% {
+    clip: rect(0px, 191px, 184px, 0);
+  }
+
+  18.33333% {
+    clip: rect(95px, 191px, 200px, 0);
+  }
+
+  20% {
+    clip: rect(94px, 191px, 111px, 0);
+  }
+
+  21.66667% {
+    clip: rect(127px, 191px, 193px, 0);
+  }
+
+  23.33333% {
+    clip: rect(144px, 191px, 55px, 0);
+  }
+
+  25% {
+    clip: rect(135px, 191px, 189px, 0);
+  }
+
+  26.66667% {
+    clip: rect(-16px, 191px, 132px, 0);
+  }
+
+  28.33333% {
+    clip: rect(135px, 191px, 88px, 0);
+  }
+
+  30% {
+    clip: rect(50px, 191px, 49px, 0);
+  }
+
+  31.66667% {
+    clip: rect(90px, 191px, 55px, 0);
+  }
+
+  33.33333% {
+    clip: rect(118px, 191px, 40px, 0);
+  }
+
+  35% {
+    clip: rect(145px, 191px, 143px, 0);
+  }
+
+  36.66667% {
+    clip: rect(149px, 191px, 124px, 0);
+  }
+
+  38.33333% {
+    clip: rect(69px, 191px, 172px, 0);
+  }
+
+  40% {
+    clip: rect(18px, 191px, 29px, 0);
+  }
+
+  41.66667% {
+    clip: rect(144px, 191px, 89px, 0);
+  }
+
+  43.33333% {
+    clip: rect(14px, 191px, 209px, 0);
+  }
+
+  45% {
+    clip: rect(23px, 191px, 137px, 0);
+  }
+
+  46.66667% {
+    clip: rect(12px, 191px, 129px, 0);
+  }
+
+  48.33333% {
+    clip: rect(72px, 191px, 102px, 0);
+  }
+
+  50% {
+    clip: rect(19px, 191px, 112px, 0);
+  }
+
+  51.66667% {
+    clip: rect(-17px, 191px, 82px, 0);
+  }
+
+  53.33333% {
+    clip: rect(160px, 191px, 47px, 0);
+  }
+
+  55% {
+    clip: rect(31px, 191px, 25px, 0);
+  }
+
+  56.66667% {
+    clip: rect(41px, 191px, 54px, 0);
+  }
+
+  58.33333% {
+    clip: rect(137px, 191px, 45px, 0);
+  }
+
+  60% {
+    clip: rect(59px, 191px, 193px, 0);
+  }
+
+  61.66667% {
+    clip: rect(31px, 191px, 206px, 0);
+  }
+
+  63.33333% {
+    clip: rect(172px, 191px, 32px, 0);
+  }
+
+  65% {
+    clip: rect(66px, 191px, 92px, 0);
+  }
+
+  66.66667% {
+    clip: rect(114px, 191px, 180px, 0);
+  }
+
+  68.33333% {
+    clip: rect(51px, 191px, 30px, 0);
+  }
+
+  70% {
+    clip: rect(130px, 191px, 66px, 0);
+  }
+
+  71.66667% {
+    clip: rect(111px, 191px, 130px, 0);
+  }
+
+  73.33333% {
+    clip: rect(-16px, 191px, 62px, 0);
+  }
+
+  75% {
+    clip: rect(-3px, 191px, 180px, 0);
+  }
+
+  76.66667% {
+    clip: rect(37px, 191px, 104px, 0);
+  }
+
+  78.33333% {
+    clip: rect(89px, 191px, 35px, 0);
+  }
+
+  80% {
+    clip: rect(117px, 191px, 128px, 0);
+  }
+
+  81.66667% {
+    clip: rect(14px, 191px, 108px, 0);
+  }
+
+  83.33333% {
+    clip: rect(134px, 191px, 52px, 0);
+  }
+
+  85% {
+    clip: rect(148px, 191px, 169px, 0);
+  }
+
+  86.66667% {
+    clip: rect(34px, 191px, 62px, 0);
+  }
+
+  88.33333% {
+    clip: rect(130px, 191px, 103px, 0);
+  }
+
+  90% {
+    clip: rect(66px, 191px, 128px, 0);
+  }
+
+  91.66667% {
+    clip: rect(28px, 191px, 211px, 0);
+  }
+
+  93.33333% {
+    clip: rect(-5px, 191px, 211px, 0);
+  }
+
+  95% {
+    clip: rect(35px, 191px, 129px, 0);
+  }
+
+  96.66667% {
+    clip: rect(163px, 191px, 85px, 0);
+  }
+
+  98.33333% {
+    clip: rect(132px, 191px, 48px, 0);
+  }
+
+  100% {
+    clip: rect(-15px, 191px, 197px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(143px, 191px, 64px, 0);
+  }
+
+  1.66667% {
+    clip: rect(35px, 191px, 148px, 0);
+  }
+
+  3.33333% {
+    clip: rect(163px, 191px, 101px, 0);
+  }
+
+  5% {
+    clip: rect(143px, 191px, 110px, 0);
+  }
+
+  6.66667% {
+    clip: rect(30px, 191px, 31px, 0);
+  }
+
+  8.33333% {
+    clip: rect(69px, 191px, 173px, 0);
+  }
+
+  10% {
+    clip: rect(91px, 191px, 190px, 0);
+  }
+
+  11.66667% {
+    clip: rect(97px, 191px, 116px, 0);
+  }
+
+  13.33333% {
+    clip: rect(31px, 191px, 149px, 0);
+  }
+
+  15% {
+    clip: rect(127px, 191px, 51px, 0);
+  }
+
+  16.66667% {
+    clip: rect(108px, 191px, 212px, 0);
+  }
+
+  18.33333% {
+    clip: rect(103px, 191px, 188px, 0);
+  }
+
+  20% {
+    clip: rect(154px, 191px, 22px, 0);
+  }
+
+  21.66667% {
+    clip: rect(55px, 191px, 131px, 0);
+  }
+
+  23.33333% {
+    clip: rect(129px, 191px, 169px, 0);
+  }
+
+  25% {
+    clip: rect(150px, 191px, 44px, 0);
+  }
+
+  26.66667% {
+    clip: rect(104px, 191px, 133px, 0);
+  }
+
+  28.33333% {
+    clip: rect(121px, 191px, 62px, 0);
+  }
+
+  30% {
+    clip: rect(-18px, 191px, 29px, 0);
+  }
+
+  31.66667% {
+    clip: rect(49px, 191px, 101px, 0);
+  }
+
+  33.33333% {
+    clip: rect(11px, 191px, 192px, 0);
+  }
+
+  35% {
+    clip: rect(131px, 191px, 196px, 0);
+  }
+
+  36.66667% {
+    clip: rect(74px, 191px, 117px, 0);
+  }
+
+  38.33333% {
+    clip: rect(118px, 191px, 184px, 0);
+  }
+
+  40% {
+    clip: rect(114px, 191px, 73px, 0);
+  }
+
+  41.66667% {
+    clip: rect(121px, 191px, 56px, 0);
+  }
+
+  43.33333% {
+    clip: rect(93px, 191px, 23px, 0);
+  }
+
+  45% {
+    clip: rect(147px, 191px, 206px, 0);
+  }
+
+  46.66667% {
+    clip: rect(-11px, 191px, 59px, 0);
+  }
+
+  48.33333% {
+    clip: rect(50px, 191px, 39px, 0);
+  }
+
+  50% {
+    clip: rect(63px, 191px, 177px, 0);
+  }
+
+  51.66667% {
+    clip: rect(136px, 191px, 85px, 0);
+  }
+
+  53.33333% {
+    clip: rect(162px, 191px, 195px, 0);
+  }
+
+  55% {
+    clip: rect(121px, 191px, 114px, 0);
+  }
+
+  56.66667% {
+    clip: rect(166px, 191px, 23px, 0);
+  }
+
+  58.33333% {
+    clip: rect(120px, 191px, 31px, 0);
+  }
+
+  60% {
+    clip: rect(139px, 191px, 68px, 0);
+  }
+
+  61.66667% {
+    clip: rect(92px, 191px, 91px, 0);
+  }
+
+  63.33333% {
+    clip: rect(151px, 191px, 88px, 0);
+  }
+
+  65% {
+    clip: rect(112px, 191px, 212px, 0);
+  }
+
+  66.66667% {
+    clip: rect(66px, 191px, 52px, 0);
+  }
+
+  68.33333% {
+    clip: rect(51px, 191px, 178px, 0);
+  }
+
+  70% {
+    clip: rect(22px, 191px, 153px, 0);
+  }
+
+  71.66667% {
+    clip: rect(121px, 191px, 88px, 0);
+  }
+
+  73.33333% {
+    clip: rect(-5px, 191px, 196px, 0);
+  }
+
+  75% {
+    clip: rect(161px, 191px, 145px, 0);
+  }
+
+  76.66667% {
+    clip: rect(166px, 191px, 187px, 0);
+  }
+
+  78.33333% {
+    clip: rect(169px, 191px, 208px, 0);
+  }
+
+  80% {
+    clip: rect(9px, 191px, 118px, 0);
+  }
+
+  81.66667% {
+    clip: rect(149px, 191px, 194px, 0);
+  }
+
+  83.33333% {
+    clip: rect(138px, 191px, 40px, 0);
+  }
+
+  85% {
+    clip: rect(164px, 191px, 130px, 0);
+  }
+
+  86.66667% {
+    clip: rect(30px, 191px, 182px, 0);
+  }
+
+  88.33333% {
+    clip: rect(141px, 191px, 205px, 0);
+  }
+
+  90% {
+    clip: rect(76px, 191px, 174px, 0);
+  }
+
+  91.66667% {
+    clip: rect(142px, 191px, 211px, 0);
+  }
+
+  93.33333% {
+    clip: rect(0px, 191px, 117px, 0);
+  }
+
+  95% {
+    clip: rect(-7px, 191px, 41px, 0);
+  }
+
+  96.66667% {
+    clip: rect(149px, 191px, 104px, 0);
+  }
+
+  98.33333% {
+    clip: rect(153px, 191px, 169px, 0);
+  }
+
+  100% {
+    clip: rect(-1px, 191px, 182px, 0);
+  }
+}
+
+.message__image .glitch svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  fill: white;
+  background: transparent;
+}
+
+.message__image .glitch svg:nth-child(2),
+.message__image .glitch svg:nth-child(3) {
+  clip: rect(0, 0, 0, 0);
+}
+
+.message__image .glitch svg:nth-child(2) {
+  fill: red;
+  left: -3px;
+  top: 3px;
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.message__image .glitch svg:nth-child(3) {
+  fill: red;
+  left: 3px;
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+  bottom: 4px;
+}
+
+@media screen and (max-width: 1365px) {
+  .message__image .glitch {
+    width: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 70px);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .message__image .glitch {
+    left: calc(50% - 97px);
+    top: calc(50% - 60px);
+    width: 194px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .message__image .glitch {
+    left: calc(50% - 60px);
+    top: calc(50% - 69px);
+    width: 120px;
+  }
+}
+
+.message__text {
+  position: relative;
+  text-align: center;
+  font-size: 1.458vw;
+  font-weight: 400;
+  line-height: 1.54vw;
+  margin-bottom: 30px;
+  padding: 0 3%;
+  color: #fff;
+}
+
+.message__text_small {
+  max-width: 380px;
+  margin-bottom: 0;
+  margin: 0 auto;
+  font-size: 1.042vw;
+  line-height: 1.38vw;
+  font-weight: 700;
+}
+.message__logo {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .message__text {
+    font-size: 3.125vw;
+    line-height: 1;
+  }
+  .message__text_small {
+    font-size: 2.9vw;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .message__text {
+    font-size: 5.33vw;
+  }
+  .message__text_small {
+    font-size: 5vw;
+  }
+}
+
+.info {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.info__text {
+  color: #474c54;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.image {
+  position: relative;
+}
+
+@media screen and (min-width: 1921px) {
+  .image {
+    flex-grow: 1;
+  }
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 1365px) {
+  .image img {
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .image img {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1921px) {
+  .image img {
+    object-fit: cover;
+  }
+}
+
+.image svg {
+  position: absolute;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 575px) {
+  .image svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .image_left svg {
+    width: 676px;
+    height: 735px;
+    left: -560px !important;
+  }
+}
+
+.image_right svg {
+  right: 9.4%;
+}
+
+@media screen and (max-width: 991px) {
+  .image_right svg {
+    right: -493px;
+    left: unset !important;
+    width: 676px;
+    height: 1035px;
+  }
+}
+
+@keyframes pixel-anim-1 {
+  0% {
+    clip: rect(-17px, 630px, 262px, 0);
+  }
+
+  2% {
+    clip: rect(854px, 630px, 206px, 0);
+  }
+
+  4% {
+    clip: rect(20px, 630px, 185px, 0);
+  }
+
+  6% {
+    clip: rect(456px, 630px, 335px, 0);
+  }
+
+  8% {
+    clip: rect(175px, 630px, 657px, 0);
+  }
+
+  10% {
+    clip: rect(168px, 630px, 447px, 0);
+  }
+
+  12% {
+    clip: rect(366px, 630px, 427px, 0);
+  }
+
+  14% {
+    clip: rect(232px, 630px, 634px, 0);
+  }
+
+  16% {
+    clip: rect(141px, 630px, 548px, 0);
+  }
+
+  18% {
+    clip: rect(160px, 630px, 818px, 0);
+  }
+
+  20% {
+    clip: rect(826px, 630px, 821px, 0);
+  }
+
+  22% {
+    clip: rect(176px, 630px, 358px, 0);
+  }
+
+  24% {
+    clip: rect(149px, 630px, 802px, 0);
+  }
+
+  26% {
+    clip: rect(89px, 630px, 227px, 0);
+  }
+
+  28% {
+    clip: rect(315px, 630px, 251px, 0);
+  }
+
+  30% {
+    clip: rect(359px, 630px, 599px, 0);
+  }
+
+  32% {
+    clip: rect(775px, 630px, 494px, 0);
+  }
+
+  34% {
+    clip: rect(161px, 630px, 747px, 0);
+  }
+
+  36% {
+    clip: rect(285px, 630px, 139px, 0);
+  }
+
+  38% {
+    clip: rect(398px, 630px, 712px, 0);
+  }
+
+  40% {
+    clip: rect(339px, 630px, 227px, 0);
+  }
+
+  42% {
+    clip: rect(374px, 630px, 469px, 0);
+  }
+
+  44% {
+    clip: rect(819px, 630px, 214px, 0);
+  }
+
+  46% {
+    clip: rect(369px, 630px, 452px, 0);
+  }
+
+  48% {
+    clip: rect(866px, 630px, 503px, 0);
+  }
+
+  50% {
+    clip: rect(142px, 630px, 569px, 0);
+  }
+
+  52% {
+    clip: rect(632px, 630px, 51px, 0);
+  }
+
+  54% {
+    clip: rect(770px, 630px, 541px, 0);
+  }
+
+  56% {
+    clip: rect(625px, 630px, 425px, 0);
+  }
+
+  58% {
+    clip: rect(595px, 630px, 880px, 0);
+  }
+
+  60% {
+    clip: rect(402px, 630px, 873px, 0);
+  }
+
+  62% {
+    clip: rect(605px, 630px, 531px, 0);
+  }
+
+  64% {
+    clip: rect(347px, 630px, 653px, 0);
+  }
+
+  66% {
+    clip: rect(277px, 630px, 188px, 0);
+  }
+
+  68% {
+    clip: rect(1px, 630px, 825px, 0);
+  }
+
+  70% {
+    clip: rect(450px, 630px, 248px, 0);
+  }
+
+  72% {
+    clip: rect(644px, 630px, 464px, 0);
+  }
+
+  74% {
+    clip: rect(281px, 630px, 719px, 0);
+  }
+
+  76% {
+    clip: rect(98px, 630px, 936px, 0);
+  }
+
+  78% {
+    clip: rect(268px, 630px, 907px, 0);
+  }
+
+  80% {
+    clip: rect(679px, 630px, 805px, 0);
+  }
+
+  82% {
+    clip: rect(-19px, 630px, 418px, 0);
+  }
+
+  84% {
+    clip: rect(262px, 630px, 349px, 0);
+  }
+
+  86% {
+    clip: rect(788px, 630px, 824px, 0);
+  }
+
+  88% {
+    clip: rect(697px, 630px, 352px, 0);
+  }
+
+  90% {
+    clip: rect(183px, 630px, 321px, 0);
+  }
+
+  92% {
+    clip: rect(643px, 630px, 486px, 0);
+  }
+
+  94% {
+    clip: rect(197px, 630px, 855px, 0);
+  }
+
+  96% {
+    clip: rect(420px, 630px, 507px, 0);
+  }
+
+  98% {
+    clip: rect(781px, 630px, 721px, 0);
+  }
+
+  100% {
+    clip: rect(265px, 630px, 512px, 0);
+  }
+}
+
+@keyframes pixel-anim-2 {
+  0% {
+    clip: rect(452px, 630px, 560px, 0);
+  }
+
+  2% {
+    clip: rect(339px, 630px, 666px, 0);
+  }
+
+  4% {
+    clip: rect(177px, 630px, 569px, 0);
+  }
+
+  6% {
+    clip: rect(811px, 630px, 791px, 0);
+  }
+
+  8% {
+    clip: rect(86px, 630px, 780px, 0);
+  }
+
+  10% {
+    clip: rect(342px, 630px, 719px, 0);
+  }
+
+  12% {
+    clip: rect(654px, 630px, 924px, 0);
+  }
+
+  14% {
+    clip: rect(728px, 630px, 458px, 0);
+  }
+
+  16% {
+    clip: rect(269px, 630px, 804px, 0);
+  }
+
+  18% {
+    clip: rect(333px, 630px, 816px, 0);
+  }
+
+  20% {
+    clip: rect(120px, 630px, 745px, 0);
+  }
+
+  22% {
+    clip: rect(829px, 630px, 642px, 0);
+  }
+
+  24% {
+    clip: rect(844px, 630px, 574px, 0);
+  }
+
+  26% {
+    clip: rect(538px, 630px, 461px, 0);
+  }
+
+  28% {
+    clip: rect(178px, 630px, 499px, 0);
+  }
+
+  30% {
+    clip: rect(461px, 630px, 235px, 0);
+  }
+
+  32% {
+    clip: rect(664px, 630px, 786px, 0);
+  }
+
+  34% {
+    clip: rect(231px, 630px, 742px, 0);
+  }
+
+  36% {
+    clip: rect(148px, 630px, 576px, 0);
+  }
+
+  38% {
+    clip: rect(628px, 630px, 487px, 0);
+  }
+
+  40% {
+    clip: rect(588px, 630px, 769px, 0);
+  }
+
+  42% {
+    clip: rect(125px, 630px, 801px, 0);
+  }
+
+  44% {
+    clip: rect(249px, 630px, 142px, 0);
+  }
+
+  46% {
+    clip: rect(291px, 630px, 648px, 0);
+  }
+
+  48% {
+    clip: rect(808px, 630px, 492px, 0);
+  }
+
+  50% {
+    clip: rect(326px, 630px, 353px, 0);
+  }
+
+  52% {
+    clip: rect(843px, 630px, 100px, 0);
+  }
+
+  54% {
+    clip: rect(864px, 630px, 92px, 0);
+  }
+
+  56% {
+    clip: rect(735px, 630px, 303px, 0);
+  }
+
+  58% {
+    clip: rect(33px, 630px, 159px, 0);
+  }
+
+  60% {
+    clip: rect(491px, 630px, 845px, 0);
+  }
+
+  62% {
+    clip: rect(607px, 630px, 294px, 0);
+  }
+
+  64% {
+    clip: rect(249px, 630px, 633px, 0);
+  }
+
+  66% {
+    clip: rect(44px, 630px, 517px, 0);
+  }
+
+  68% {
+    clip: rect(315px, 630px, 748px, 0);
+  }
+
+  70% {
+    clip: rect(648px, 630px, 442px, 0);
+  }
+
+  72% {
+    clip: rect(400px, 630px, 808px, 0);
+  }
+
+  74% {
+    clip: rect(402px, 630px, 400px, 0);
+  }
+
+  76% {
+    clip: rect(461px, 630px, 621px, 0);
+  }
+
+  78% {
+    clip: rect(680px, 630px, 386px, 0);
+  }
+
+  80% {
+    clip: rect(572px, 630px, 456px, 0);
+  }
+
+  82% {
+    clip: rect(202px, 630px, 307px, 0);
+  }
+
+  84% {
+    clip: rect(652px, 630px, 106px, 0);
+  }
+
+  86% {
+    clip: rect(819px, 630px, 605px, 0);
+  }
+
+  88% {
+    clip: rect(65px, 630px, 624px, 0);
+  }
+
+  90% {
+    clip: rect(79px, 630px, 136px, 0);
+  }
+
+  92% {
+    clip: rect(397px, 630px, 931px, 0);
+  }
+
+  94% {
+    clip: rect(682px, 630px, 192px, 0);
+  }
+
+  96% {
+    clip: rect(864px, 630px, 263px, 0);
+  }
+
+  98% {
+    clip: rect(548px, 630px, 619px, 0);
+  }
+
+  100% {
+    clip: rect(333px, 630px, 477px, 0);
+  }
+}
+
+.image .pixels svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  fill: white;
+  background: transparent;
+}
+
+.image .pixels svg:nth-child(2),
+.image .pixels svg:nth-child(3) {
+  clip: rect(0, 0, 0, 0);
+}
+
+.image .pixels svg:nth-child(2) {
+  fill: red;
+  left: -3px;
+  top: 3px;
+  animation: pixel-anim-1 2s infinite linear alternate-reverse;
+}
+
+.image .pixels svg:nth-child(3) {
+  fill: red;
+  left: 3px;
+  animation: pixel-anim-2 3s infinite linear alternate-reverse;
+  bottom: 4px;
+}
+
+@media screen and (min-width: 1921px) {
+  .image .pixels {
+    display: none;
+  }
+}
